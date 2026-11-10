@@ -1,6 +1,6 @@
 # HWE-Bench RTL50
 
-从公开HWE-Bench选出的50例原始RTL修复任务，供组内审阅和后续主评测准备。Ibex 12例、CVA6 4例、Caliptra 9例、OpenTitan 25例。题面、代码版本、参考补丁、测试与评分标准保持上游原样；新增内容为筛选记录、中文审查和离线完整性检查。
+从公开HWE-Bench选出的50例原始RTL修复任务，供不同研究方向共同使用。Ibex 12例、CVA6 4例、Caliptra 9例、OpenTitan 25例。题面、代码版本、参考补丁、测试与评分标准保持上游原样；新增内容为筛选记录、中文审查和离线完整性检查。
 
 先看 [50例情况与清单](benchmark_prep.md)，再看 [数据目录](datasets/README.md)。10例有本地原测试配对记录，其余40例待本地原测试校准；50例全量运行环境仍按项目准备。
 
@@ -15,7 +15,7 @@ docs/                     # 原HWE运行、镜像和agent说明
 experiments/quality_review_20261110/analysis/
                           # 50例中文审查、10例原测试日志、补位复核
 provenance/               # 来源、选择依据和文件校验
-benchmark_prep.md         # 50例状态与后续准备要求
+benchmark_prep.md         # 案例清单、验证状态与使用说明
 pyproject.toml, uv.lock   # 原Python依赖
 LICENSE                   # 原Apache-2.0许可；第三方许可随deps保留
 ```
@@ -30,7 +30,7 @@ python scripts/verify_subset.py
 python scripts/verify_subset.py --source /path/to/original/hwe_bench_full.jsonl
 ```
 
-校验脚本只使用Python标准库，Python 3.10+可执行，无需Docker、EDA或模型账户。数据集已经随仓库提供。
+校验脚本只使用Python标准库，Python 3.10+可执行。数据集已经随仓库提供。
 
 ## 准备原HWE运行环境
 
@@ -69,10 +69,10 @@ uv run python -m hwe_bench.harness.evaluator \
   --stop_on_error false --max_workers 1
 ```
 
-模型配置沿用Rtl-Fix约定：DeepSeek官方API的`deepseek-flash`。本次只打包数据与工具，模型请求数为0。上游[agent说明](docs/agents.md)含多种示例，后续实验按项目冻结的模型配置执行。原adapter主线保持隐藏验收；若研究需要公开初始失败TB/log，需另行冻结模型可见清单。
+可以使用原Harbor流程，也可以由其他工具生成修复补丁后交给evaluator验收。参考补丁和验收测试随原始数据保留；各使用方根据自己的任务定义输入范围和评价方式。上游[运行说明](docs/agents.md)提供原工具的使用示例。
 
 ## 来源
 
-上游代码：<https://github.com/pku-liang/hwe-bench>，固定提交`10c78a87e1f92695d78d15b1464a6107dcac8837`。数据：<https://huggingface.co/datasets/henryen/hwe-bench>，固定版本`82a42e0a05719366a326e09ddc668ea0d46c91f6`。
+上游代码：[https://github.com/pku-liang/hwe-bench](https://github.com/pku-liang/hwe-bench)，固定提交`10c78a87e1f92695d78d15b1464a6107dcac8837`。数据：[https://huggingface.co/datasets/henryen/hwe-bench](https://huggingface.co/datasets/henryen/hwe-bench)，固定版本`82a42e0a05719366a326e09ddc668ea0d46c91f6`。
 
 逐行来源、未修改工具的文件哈希、#15269补位依据均随仓库保留。研究使用时引用原HWE-Bench，BibTeX见[上游README](README.upstream.md#citation)。

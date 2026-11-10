@@ -4,7 +4,7 @@
 
 保留理由：从停住的读到竞争写再到读写先后完成都测到了，接口层复现较干净。
 
-本地证据：**仅历史改编证据；原测试待实测**。完整主评测准备状态：待校准。
+本地证据：**仅历史改编证据；原测试待实测**。运行准备状态：待校准。
 
 ## 原始 HWE 题面
 
@@ -21,7 +21,7 @@ In Caliptra's AXI subordinate arbiter (`axi_sub_arb`), overlapping read and writ
 | 环境真实性 | 真实axi_sub_arb端口级测试，无替身/内部force；prepare只对非目标integration文件做CRLF归一。 |
 | 跨周期价值 | 高：跨周期仲裁所有权与新竞争者交叠。 |
 | 题面提示 | 很高：已告诉winner需保持到接受及read先write后。 |
-| 原审查后续建议 | 原HWE双版本校准，追加write被hold、burst及C_LAT配置的已有回归；与本项目B07改编记录分开。 |
+| 原审查后续建议 | 原HWE双版本校准，追加write被hold、burst及C_LAT配置的已有回归；与历史改编测试证据分开。 |
 
 ## 原字段证据
 

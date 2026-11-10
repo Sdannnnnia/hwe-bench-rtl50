@@ -2,9 +2,9 @@
 
 来源：[原PR](https://github.com/lowRISC/opentitan/pull/24771)；源数据第178行；分类 `RTL_LOGIC`。
 
-保留理由：真实 SHA 计算/停止相遇导致卡死，已有本项目改编运行证据；原 HWE 仍按原口径审。
+保留理由：真实 SHA 计算/停止相遇导致卡死，已有历史改编测试证据；原 HWE 测试仍待本地核验。
 
-本地证据：**仅历史改编证据；原测试待实测**。完整主评测准备状态：待校准。
+本地证据：**仅历史改编证据；原测试待实测**。运行准备状态：待校准。
 
 ## 原始 HWE 题面
 
@@ -28,10 +28,10 @@ This occurs when a block-aligned SHA-256 message is written to the HMAC message 
 | 触发过程 | 16个word填满512bit块→SHA轮运算完成/digest更新→稍后stop→FIFO状态遗漏完成→无法done/idle。 |
 | 测试覆盖 | 真实 prim_sha2+pad；测试给16word、延迟70拍stop，200拍内要求hash_done曾出现且idle。 |
 | 尚存缺口 | 不比较digest值，也不验digest_on_blk/continue/process；固定done/idle假修复需其他模式/known digest拦住。原TB部分握手循环无全局watchdog，运行器要外部超时。 |
-| 环境真实性 | 真实运算数据通路，MultimodeEn=0/SHA256；直接prim接口，未覆盖HMAC CSR。B05在原测试基础增加probe/delay参数，不等于原HWE整脚本运行。 |
+| 环境真实性 | 真实运算数据通路，MultimodeEn=0/SHA256；直接prim接口，未覆盖HMAC CSR。历史改编测试增加了观测和延迟参数，其结果与原HWE整脚本运行分开记录。 |
 | 跨周期价值 | 很高，数据输入、轮计算和异步软件终止三个阶段。 |
 | 题面提示 | 中：给出stop延迟/块对齐症状，没有在题面给具体FIFO状态名。 |
-| 原审查后续建议 | 复核B05原始关联并做当前原HWE或明确adapted校准；加known digest与continue/process正常回归。 |
+| 原审查后续建议 | 核验原HWE脚本的运行结果；加known digest与continue/process正常回归。 |
 
 ## 原字段证据
 
