@@ -1,0 +1,84 @@
+{
+  "repository": "lowRISC/opentitan",
+  "revision": "2512ca0da80635a4677c522b1f8b8b8d5bc23789",
+  "method": "GitHub connector fetch_file at fixed commit",
+  "files": [
+    {
+      "path": "hw/ip/spi_device/dv/env/spi_device_scoreboard.sv",
+      "git_blob_sha": "2f497e790bcbb257c1a1d54e603479a6fd4ca03b",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/ip/spi_device/dv/env/spi_device_scoreboard.sv",
+      "local_path": "source/hw/ip/spi_device/dv/env/spi_device_scoreboard.sv",
+      "sha256": "a69eb8851999b9e3c6d3337ca7ffd06e06c12ac7fe2f23aebadea24845d3eeba"
+    },
+    {
+      "path": "hw/ip/spi_device/dv/env/seq_lib/spi_device_tpm_base_vseq.sv",
+      "git_blob_sha": "8de3c901e2010446ed70fe6c83961dffda1756f7",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/ip/spi_device/dv/env/seq_lib/spi_device_tpm_base_vseq.sv",
+      "local_path": "source/hw/ip/spi_device/dv/env/seq_lib/spi_device_tpm_base_vseq.sv",
+      "sha256": "492b50e8f01be48c4ccb13ccddc32a624feef8ae7218cd8ab82de640414f74c1"
+    },
+    {
+      "path": "hw/ip/spi_device/dv/env/spi_device_env_cfg.sv",
+      "git_blob_sha": "6f19ca9a56c0322e5884a3ed6e11e15f010bde51",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/ip/spi_device/dv/env/spi_device_env_cfg.sv",
+      "local_path": "source/hw/ip/spi_device/dv/env/spi_device_env_cfg.sv",
+      "sha256": "03442b50e7ef2f47ad23eb2a2b3c6a8759433d0feac423cb3e27495d562d6e2f"
+    },
+    {
+      "path": "hw/ip/spi_device/dv/env/spi_device_env.sv",
+      "git_blob_sha": "3a6fb80dbbe36c410db2f435b888c60d14ec05d5",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/ip/spi_device/dv/env/spi_device_env.sv",
+      "local_path": "source/hw/ip/spi_device/dv/env/spi_device_env.sv",
+      "sha256": "843b015c16c87d021ddc81650b0e72fb30a3a2f7b1edd1e98d128d69efb02ef7"
+    },
+    {
+      "path": "hw/ip/spi_device/dv/env/seq_lib/spi_device_base_vseq.sv",
+      "git_blob_sha": "23b8ff370187d1367bca85264893e29a8cf7b7b7",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/ip/spi_device/dv/env/seq_lib/spi_device_base_vseq.sv",
+      "local_path": "source/hw/ip/spi_device/dv/env/seq_lib/spi_device_base_vseq.sv",
+      "sha256": "ae6417b12c72991dcf4539c67957b1e94fd562e19cda3e9e3d302d7617e2a5dd"
+    },
+    {
+      "path": "hw/dv/sv/dv_lib/dv_base_env_cfg.sv",
+      "git_blob_sha": "b1439f4ec1786e37a7c97d6c4e73092939df21c4",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/dv/sv/dv_lib/dv_base_env_cfg.sv",
+      "local_path": "source/hw/dv/sv/dv_lib/dv_base_env_cfg.sv",
+      "sha256": "b7b654b734edd953d54b35590ffb171ea3bd5eb5f6cece59101f92982a199dcb"
+    },
+    {
+      "path": "hw/ip/spi_device/dv/env/spi_device_env_pkg.sv",
+      "git_blob_sha": "544b9ad2a6f2cab2ed6e6390c681d275bfe62691",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/ip/spi_device/dv/env/spi_device_env_pkg.sv",
+      "local_path": "source/hw/ip/spi_device/dv/env/spi_device_env_pkg.sv",
+      "sha256": "40a79a4388e1a4bb9492df5d7733932a71b89d0c0e079cf44a8db5673b41fd2e"
+    },
+    {
+      "path": "hw/ip/spi_device/dv/spi_device_sim_cfg.hjson",
+      "git_blob_sha": "fe31bf8a93d66914514bebd6404db63c1bf25a6a",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/ip/spi_device/dv/spi_device_sim_cfg.hjson",
+      "local_path": "source/hw/ip/spi_device/dv/spi_device_sim_cfg.hjson",
+      "sha256": "aadd06aa3f25f7bdaa43f94ba4e1c9e2f691035963544c43483b913e0c5fd110"
+    },
+    {
+      "path": "hw/dv/sv/spi_agent/seq_lib/spi_host_tpm_seq.sv",
+      "git_blob_sha": "fa3a6c0161c556730e9d25cd7f664e160f31ca72",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/dv/sv/spi_agent/seq_lib/spi_host_tpm_seq.sv",
+      "local_path": "source/hw/dv/sv/spi_agent/seq_lib/spi_host_tpm_seq.sv",
+      "sha256": "2df40ef77790ac4149dd9dd78fc353b066964390641cf1496e43d24d166233db"
+    },
+    {
+      "path": "hw/dv/sv/spi_agent/spi_monitor.sv",
+      "git_blob_sha": "3b6d4d91e648c30643506edcc87f86c77bcbdcfc",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/dv/sv/spi_agent/spi_monitor.sv",
+      "local_path": "source/hw/dv/sv/spi_agent/spi_monitor.sv",
+      "sha256": "a164bf92b582eb2b3ba6fac081beb6caa155a538cd9f8df8f12ff0bf44e14ba9"
+    },
+    {
+      "path": "hw/ip/spi_device/dv/tests/spi_device_base_test.sv",
+      "git_blob_sha": "27982438ccd43bb8964a26c1f5ca398836ebde01",
+      "url": "https://github.com/lowRISC/opentitan/blob/2512ca0da80635a4677c522b1f8b8b8d5bc23789/hw/ip/spi_device/dv/tests/spi_device_base_test.sv",
+      "local_path": "source/hw/ip/spi_device/dv/tests/spi_device_base_test.sv",
+      "sha256": "94a4306869820c91b102750e255347ec1502331013962eaddf50de4ec6a160e2"
+    }
+  ]
+}

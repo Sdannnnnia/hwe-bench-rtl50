@@ -1,0 +1,2 @@
+/hwe/tb_script.sh: line 213:    51 Aborted                 (core dumped) "${SIM_BIN}" 2>&1
+        52 Done                    | tee "${SIM_LOG}"

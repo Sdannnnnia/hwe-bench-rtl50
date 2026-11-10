@@ -1,0 +1,17 @@
+make: Entering directory '/home/ibex/.tb_prefetch_request_hold/obj_dir'
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -Os -c -o sim_main.o /home/ibex/.tb_prefetch_request_hold/sim_main.cpp
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -Os -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+/usr/bin/perl /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vibex_prefetch_buffer.cpp Vibex_prefetch_buffer__Slow.cpp Vibex_prefetch_buffer__Syms.cpp > Vibex_prefetch_buffer__ALL.cpp
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -Os -c -o Vibex_prefetch_buffer__ALL.o Vibex_prefetch_buffer__ALL.cpp
+ar -cr Vibex_prefetch_buffer__ALL.a Vibex_prefetch_buffer__ALL.o
+ranlib Vibex_prefetch_buffer__ALL.a
+g++    sim_main.o verilated.o Vibex_prefetch_buffer__ALL.a      -o Vibex_prefetch_buffer
+make: Leaving directory '/home/ibex/.tb_prefetch_request_hold/obj_dir'
+HWE_BENCH_RESULTS_START
+OBSERVE tag=branch_grant req=1 addr=0x100 busy=1
+OBSERVE tag=request_without_grant req=1 addr=0x104 busy=1
+OBSERVE tag=held_request req=1 addr=0x104 busy=1
+OBSERVE tag=grant_held_request req=1 addr=0x104 busy=1
+RUNTIME_CHECK: request stayed asserted until grant and address stayed stable
+TEST: prefetch_request_hold ... PASS
+HWE_BENCH_RESULTS_END

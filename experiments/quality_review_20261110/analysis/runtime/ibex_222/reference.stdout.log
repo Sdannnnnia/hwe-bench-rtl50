@@ -1,0 +1,5 @@
+Observed regfile_we deasserted for four IF stall cycles; x13=00000001
+- /home/ibex/.tb_if_stall_regfile_we/ibex_if_stall_tb.sv:102: Verilog $finish
+HWE_BENCH_RESULTS_START
+TEST: if_stall_regfile_we ... PASS
+HWE_BENCH_RESULTS_END

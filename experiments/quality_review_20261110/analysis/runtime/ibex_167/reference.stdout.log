@@ -1,0 +1,42 @@
+%Warning-PINCONNECTEMPTY: rtl/ibex_prefetch_buffer.sv:91:8: Cell pin connected by name with empty reference: 'out_valid_stored_o'
+   91 |       .out_valid_stored_o    (                   )
+      |        ^~~~~~~~~~~~~~~~~~
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-WIDTH: rtl/ibex_decoder.sv:553:28: Logical Operator LOGOR expects 1 bit on the LHS, but LHS's SEL generates 5 bits.
+                                          : ... In instance ibex_debug_halt_tb.dut.u_ibex_core.id_stage_i.decoder_i
+  553 |           if (instr[19:15] || instr[11:07]) begin
+      |                            ^~
+%Warning-WIDTH: rtl/ibex_decoder.sv:553:28: Logical Operator LOGOR expects 1 bit on the RHS, but RHS's SEL generates 5 bits.
+                                          : ... In instance ibex_debug_halt_tb.dut.u_ibex_core.id_stage_i.decoder_i
+  553 |           if (instr[19:15] || instr[11:07]) begin
+      |                            ^~
+%Warning-WIDTH: rtl/ibex_core.sv:629:44: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'rvfi_valid' generates 1 bits.
+                                       : ... In instance ibex_debug_halt_tb.dut.u_ibex_core
+  629 |       rvfi_order             <= rvfi_order + rvfi_valid;
+      |                                            ^
+%Warning-WIDTH: rtl/ibex_core.sv:720:13: Logical Operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'rvfi_rd_addr_id' generates 5 bits.
+                                       : ... In instance ibex_debug_halt_tb.dut.u_ibex_core
+  720 |         if (!rvfi_rd_addr_id) begin
+      |             ^
+make: Entering directory '/home/ibex/.tb_debug_halt_resume_pc/obj_dir'
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -Os -c -o sim_main.o /home/ibex/.tb_debug_halt_resume_pc/sim_main.cpp
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -Os -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -Os -c -o Vibex_debug_halt_tb.o Vibex_debug_halt_tb.cpp
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -Os -c -o Vibex_debug_halt_tb__1.o Vibex_debug_halt_tb__1.cpp
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow       -c -o Vibex_debug_halt_tb__Slow.o Vibex_debug_halt_tb__Slow.cpp
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow       -c -o Vibex_debug_halt_tb__1__Slow.o Vibex_debug_halt_tb__1__Slow.cpp
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow       -c -o Vibex_debug_halt_tb__Syms.o Vibex_debug_halt_tb__Syms.cpp
+ar -cr Vibex_debug_halt_tb__ALL.a Vibex_debug_halt_tb.o Vibex_debug_halt_tb__1.o Vibex_debug_halt_tb__Slow.o Vibex_debug_halt_tb__1__Slow.o Vibex_debug_halt_tb__Syms.o
+ranlib Vibex_debug_halt_tb__ALL.a
+g++    sim_main.o verilated.o Vibex_debug_halt_tb__ALL.a      -o debug_halt_resume_pc
+make: Leaving directory '/home/ibex/.tb_debug_halt_resume_pc/obj_dir'
+TRACE: order=0 pc=0x00000080 insn=0x00000293
+EVENT: debug_req armed while pc_id=0x00000084
+TRACE: order=1 pc=0x00000084 insn=0x00128293
+EVENT: entered debug mode
+TRACE: order=2 pc=0x1a110800 insn=0x7b200073
+TRACE: order=3 pc=0x00000088 insn=0x00100313
+RESULT: resumed_pc=0x00000088
+HWE_BENCH_RESULTS_START
+TEST: debug_halt_resume_pc ... PASS
+HWE_BENCH_RESULTS_END

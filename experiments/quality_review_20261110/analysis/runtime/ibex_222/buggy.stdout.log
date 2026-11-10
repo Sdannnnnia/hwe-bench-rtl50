@@ -1,0 +1,7 @@
+Observed regfile_we=1 during IF stall; x13=00000001
+[33] %Error: ibex_if_stall_tb.sv:97: Assertion failed in TOP.ibex_if_stall_tb: regfile_we stayed asserted during IF stall
+%Error: /home/ibex/.tb_if_stall_regfile_we/ibex_if_stall_tb.sv:97: Verilog $stop
+Aborting...
+HWE_BENCH_RESULTS_START
+TEST: if_stall_regfile_we ... FAIL
+HWE_BENCH_RESULTS_END

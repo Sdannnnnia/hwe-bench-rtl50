@@ -1,0 +1,5 @@
+IRQ_HANDLER_STORE
+- /home/ibex/.tb_irq_flush/tb_irq_flush.sv:89: Verilog $finish
+HWE_BENCH_RESULTS_START
+TEST: csr_irq_flush pending_irq_taken ... PASS
+HWE_BENCH_RESULTS_END
